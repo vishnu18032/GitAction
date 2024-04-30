@@ -21,7 +21,7 @@ jobs:
         architecture: 'x64'
         check-latest: false
         server-id: 'github'
-        server-username: ${{ github.actor }}
+        server-username: vishnu18032
         server-password: ${{ secrets.GITHUB_TOKEN }}
         overwrite-settings: true
     - name: Build with Maven
