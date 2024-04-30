@@ -1,4 +1,4 @@
-name: Java
+name: Java CI
 
 on:
   push:
@@ -17,13 +17,8 @@ jobs:
       uses: actions/setup-java@v2
       with:
         java-version: '17'
-        java-package: 'jdk'
+        distribution: 'adopt'
         architecture: 'x64'
-        check-latest: false
-        server-id: 'github'
-        server-username: vishnu18032
-        server-password: ${{ secrets.GITHUB_TOKEN }}
-        overwrite-settings: true
     - name: Build with Maven
       run: ./mvnw clean install
     - name: Run tests
